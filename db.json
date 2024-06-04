@@ -1,0 +1,40 @@
+{
+  "cards": [
+    {
+      "id": 1712870573018,
+      "name": "23wfsf",
+      "cardNumber": "2314 2342 3423 4234",
+      "expiration": "2024-03",
+      "cvv": 123,
+      "iconSrc": "icons/checked-radio-svgrepo-com.svg",
+      "isActive": false
+    },
+    {
+      "id": 1712870964241,
+      "name": "",
+      "cardNumber": "",
+      "expiration": "",
+      "cvv": null,
+      "iconSrc": "icons/checked-radio-svgrepo-com.svg",
+      "isActive": false
+    },
+    {
+      "id": 1712870969481,
+      "name": "",
+      "cardNumber": "",
+      "expiration": "",
+      "cvv": null,
+      "iconSrc": "icons/checked-radio-svgrepo-com.svg",
+      "isActive": false
+    },
+    {
+      "id": 1712871357660,
+      "name": "",
+      "cardNumber": "",
+      "expiration": "",
+      "cvv": null,
+      "iconSrc": "icons/checked-radio-svgrepo-com.svg",
+      "isActive": false
+    }
+  ]
+}

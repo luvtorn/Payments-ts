@@ -1,0 +1,326 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+* {
+  font-family: "Lato", sans-serif;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 500px;
+}
+
+.payment-methods {
+  list-style: none;
+  padding: 0;
+}
+
+.payment-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  border-radius: 12px;
+  padding: 4px;
+  margin-bottom: 10px;
+  font-weight: 600;
+  background: #959595;
+}
+
+.card-info {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  width: 100%;
+  padding: 5px 8px;
+  border-radius: 12px;
+}
+
+.active {
+  background: linear-gradient(to right, black, red, red, purple, purple);
+  padding: 6px;
+}
+
+.card-type {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.card-details {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+.payment-item img {
+  margin-right: 10px;
+  width: 65px;
+  height: auto;
+}
+
+.checked-icon {
+  width: 35px !important;
+  position: absolute;
+  right: 10px;
+  top: calc(50% - 20px);
+  cursor: pointer;
+}
+
+.default {
+  position: absolute;
+  right: 110px;
+  bottom: 5px;
+  font-weight: 800;
+}
+
+.add-btn {
+  width: 100%;
+  border: 2px solid #959595;
+  outline: none;
+  background-color: transparent;
+  height: 90px;
+  transition: all 0.3s ease-in-out;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  font-size: 18px;
+}
+
+.add-btn:hover {
+  background-color: #b3b3b3;
+}
+
+.add-btn:active {
+  background-color: rgb(133, 133, 133);
+}
+
+.modal {
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  z-index: 100;
+  box-shadow: -1px 11px 24px 0px rgba(66, 68, 90, 1);
+}
+
+.modal-content {
+  position: absolute;
+  top: calc(50% - 340px);
+  left: calc(50% - 300px);
+  width: 600px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  color: #333;
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 20px;
+}
+
+.card-info {
+  position: relative;
+  width: 95%;
+}
+
+.card-data {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  margin-right: 20px;
+  font-weight: 400;
+}
+
+.card-data input {
+  margin-bottom: 20px;
+  background-color: #ccc;
+  outline: none;
+  border: none;
+  height: 30px;
+  border-radius: 7px;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.big {
+  width: 300px;
+}
+
+.little {
+  width: 150px;
+}
+
+.hidden {
+  display: none;
+}
+
+.submit-btn {
+  padding: 15px 60px;
+  background-color: #2768ff;
+  color: #fff;
+  box-shadow: 0px 19px 40px -11px rgba(66, 68, 90, 1);
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  transition: all 0.3s linear;
+}
+
+.close-btn {
+  padding: 15px 60px;
+  background-color: #fff;
+  color: #2768ff;
+  box-shadow: 0px 19px 40px -11px rgba(66, 68, 90, 1);
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  margin-right: 15px;
+  margin-top: 10px;
+  font-size: 18px;
+  transition: all 0.3s linear;
+}
+
+.close-btn:hover {
+  background-color: #ebebeb;
+}
+
+.submit-btn:hover {
+  background-color: #0a4de9;
+}
+
+.wallet-icon {
+  width: 45px;
+}
+
+.input-num {
+  position: absolute;
+  color: #fff;
+  bottom: 80px;
+  left: 50px;
+  font-size: 24px;
+  letter-spacing: 3px;
+}
+
+.input-name {
+  position: absolute;
+  color: #fff;
+  bottom: 50px;
+  left: 50px;
+  font-size: 20px;
+}
+
+.input-expiration {
+  position: absolute;
+  color: #fff;
+  bottom: 50px;
+  left: 265px;
+  font-size: 20px;
+}
+
+.card-holder-expiration {
+  position: absolute;
+  right: 150px;
+  bottom: 40px;
+  font-size: 24px;
+  color: #fff;
+}
+
+.card-holder-name {
+  position: absolute;
+  left: 50px;
+  bottom: 40px;
+  font-size: 24px;
+  color: #fff;
+}
+
+.card-holder-num {
+  position: absolute;
+  left: 50px;
+  bottom: 90px;
+  font-size: 24px;
+  letter-spacing: 3px;
+  color: #fff;
+}
+
+.card-holder-cvv {
+  position: absolute;
+  right: 127px;
+  bottom: 65px;
+  font-size: 24px;
+  color: #000;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.header button {
+  font-size: 18px;
+  outline: none;
+  border: 1px solid #ccc;
+  padding: 5px 15px;
+  transition: background-color 0.2s linear;
+}
+
+.header button:hover {
+  background-color: #adadad;
+}
+
+.header button:active {
+  background-color: #878787;
+}
+
+.info-data {
+  position: relative;
+  width: 600px;
+  height: 400px;
+  perspective: 1000px; /* Задаем перспективу для 3D-эффекта */
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden; /* Скрытие обратной стороны */
+  transition: transform 0.7s ease-in-out; /* Анимация переворота */
+}
+
+.card-front {
+  background: url("icons/credit-card-on-png-background-600nw-2259495135.webp")
+    center/cover; /* Лицевая сторона */
+}
+
+.card-back {
+  background: url("icons/credit-card-back.png") center/cover; /* Обратная сторона */
+  transform: scaleX(0.4); /* Изначально обратная сторона повернута */
+  opacity: 0;
+}
+
+.info-data.flipped .card-front {
+  transform: scaleX(0.4); /* Переворачиваем лицевую сторону */
+  opacity: 0;
+}
+
+.info-data.flipped .card-back {
+  transform: scaleX(1); /* Переворачиваем обратную сторону */
+  opacity: 1;
+}

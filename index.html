@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="modal hidden">
+      <form class="modal-content">
+        <div class="card-info">
+          <p class="input-num"></p>
+          <p class="input-name"></p>
+          <p class="input-expiration"></p>
+          <img
+            src="icons/credit-card-on-png-background-600nw-2259495135.webp"
+            alt=""
+          />
+        </div>
+        <div class="card-data">
+          <label for="name">Name</label>
+          <input type="text" class="big name" name="name" id="name" required />
+
+          <label for="card-num">Card Number</label>
+          <input
+            type="text"
+            class="big card-num"
+            onchange="(e) => setValue(e)"
+            name="card-num"
+            id="card-num"
+            minlength="19"
+            maxlength="19"
+            required
+          />
+        </div>
+
+        <div class="card-data">
+          <label for="card-expiration">Expiration</label>
+          <input
+            type="month"
+            class="little expire"
+            name="card-expiration"
+            id="card-expiration"
+            required
+          />
+
+          <label for="cvv">CVV</label>
+          <input
+            type="password"
+            class="little cvv"
+            name="cvv"
+            id="cvv"
+            maxlength="3"
+            required
+          />
+        </div>
+
+        <div>
+          <button class="close-btn">Cancel</button>
+          <button type="submit" class="submit-btn">Submit</button>
+        </div>
+      </form>
+    </div>
+    <div class="info-modal modal hidden">
+      <div class="info-content modal-content">
+        <div class="info-data" id="card" onclick="flipCard()">
+          <div class="card-front">
+            <p class="card-holder-name"></p>
+            <p class="card-holder-expiration"></p>
+            <p class="card-holder-num"></p>
+          </div>
+          <div class="card-back">
+            <p class="card-holder-cvv"></p>
+          </div>
+        </div>
+        <button class="info-close-btn close-btn">Close</button>
+      </div>
+    </div>
+    <div class="container">
+      <section class="header">
+        <h2>Choose your payment method</h2>
+        <button class="edit-btn">Edit</button>
+      </section>
+      <ul class="payment-methods"></ul>
+      <button class="add-btn" onclick="openModal()">
+        <img class="wallet-icon" src="icons/wallet-svgrepo-com.svg" />
+        Add Payment Method
+      </button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
